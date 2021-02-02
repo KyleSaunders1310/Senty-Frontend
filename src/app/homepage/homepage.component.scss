@@ -1,0 +1,19 @@
+@import '../../main-styles.scss';
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height: 100%;
+}
+
+.page-spacer{
+width:100%;
+height:10%;
+}
+
+.spacer{
+  height: 2%;
+}

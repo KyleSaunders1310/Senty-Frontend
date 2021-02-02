@@ -1,0 +1,42 @@
+<div class="centered-content">
+  <div class="dictionary-container">
+
+    <div class="sidebar has-background-white">
+      <h1 class="title has-text-primary">
+        PARTS OF SPEECH
+      </h1>
+
+      <div *ngFor="let wordType of wordTypes" class="list-menu">
+        <a (click)="getWordsByType(wordType)" class="list-menu-item">
+          <p>{{wordType}}s</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="word-list has-background-light">
+      <h1 class="title has-text-primary">
+        WORD LIST {{this.selectedWordType}}
+      </h1>
+      <div class="words has-background-light">
+        <div *ngFor="let word of words" class="word has-background-white" (click)="newMessage(word.word)">
+          <p>{{word.word}}</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="spacer">
+
+    </div>
+
+  </div>
+  <div class="sentence-container">
+    <h1 class="title has-text-primary">SENTENCES</h1>
+    <div class="words has-background-white">
+      <div *ngFor="let sentence of sentences" class="sentence has-background-light" >
+        <p>{{sentence.sentence}}</p>
+      </div>
+
+    </div>
+  </div>
+</div>
